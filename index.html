@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+</head>
+<body>
+
+    <script>
+        let startGame = confirm("Can we play the Game");
+        if(startGame){
+
+
+            let userEntervalue = prompt("Please enter the ROCK,PAPER AND SCISSOR");
+
+            if(userEntervalue){
+
+                userEntervalue = userEntervalue.toLowerCase();
+                let ComputerChoose =Math.floor(Math.random()*3+1);
+                console.log("random gerntor",ComputerChoose)
+               
+               let finalComputerChoose =  ComputerChoose === 1?"rock":ComputerChoose === 2?"paper":"scissor";
+               console.log("user value :",userEntervalue)
+                
+               console.log("computer value:,",finalComputerChoose)
+
+        
+
+        let check  =userEntervalue===finalComputerChoose? `your chose: ${userEntervalue} and Computer chose : ${finalComputerChoose} so \n\n the game is Tie`:
+        userEntervalue ==="rock" && finalComputerChoose ==="paper"?`your chose: ${userEntervalue} and Computer chose : ${finalComputerChoose} so \n\n Computer is the Winner! `: 
+        userEntervalue === "rock" && finalComputerChoose ==="scissor"?  `your chose: ${userEntervalue} and Computer chose : ${finalComputerChoose} so \n\n You are the Winner!`:
+        userEntervalue==="paper"&& finalComputerChoose==="rock"?`your chose: ${userEntervalue} and Computer chose : ${finalComputerChoose} so \n\n Your are the Winner!!!! `:
+        userEntervalue==="paper"&& finalComputerChoose=="scissor"?`your chose: ${userEntervalue} and Computer chose : ${finalComputerChoose} so \n\n Computer is the Winner! `:
+        userEntervalue==="scissor"&& finalComputerChoose=="rock"?`your chose: ${userEntervalue} and Computer chose : ${finalComputerChoose} so \n\n Computer is the Winner! `:
+        userEntervalue==="scissor"&&finalComputerChoose==="paper"?`your chose: ${userEntervalue} and Computer chose : ${finalComputerChoose} so \n\n Your are the Winner!!!! `:"Please enter the corret word"
+       
+        
+
+
+
+        alert(check)
+        window.location.reload()
+
+
+       
+                
+
+
+            }
+           
+            else{
+                alert("I guess you change your mind we will play later")
+            }
+
+        }
+else{
+    alert("Okie May be Later")
+}
+    </script>
+
+
+</body>
+</html>
